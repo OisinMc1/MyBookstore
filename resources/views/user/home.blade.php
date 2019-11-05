@@ -1,6 +1,6 @@
 @extends('layouts.app')
-# @Date:   2019-10-23T12:54:00+01:00
-# @Last modified time: 2019-10-23T13:19:06+01:00
+# @Date:   2019-10-24T09:29:06+01:00
+# @Last modified time: 2019-11-05T12:40:18+00:00
 
 
 
@@ -13,13 +13,15 @@
                 <div class="card-header">Dashboard</div>
 
                 <div class="card-body">
+
+                  <p>Welcome to My Bookstore!📚<a href="{{ route('user.books.index')}}">Books</a></p>
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
                     @endif
 
-                    You are logged in as a user!
+                    You are logged in as an ordinary user!
                 </div>
             </div>
         </div>
