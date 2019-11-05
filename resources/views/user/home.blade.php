@@ -22,6 +22,14 @@
                     @endif
 
                     You are logged in as an ordinary user!
+
+                    <br>
+                      Hello {{Auth::user()->name}}
+                    <br>
+                      Email: {{Auth::user()->email}}
+                    <br>
+                      Address: {{Auth::user()->customer->address}}
+                    <br>
                 </div>
             </div>
         </div>

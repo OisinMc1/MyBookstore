@@ -28,9 +28,44 @@ class UsersTableSeeder extends Seeder
       $admin->save();
       $admin->roles()->attach($role_admin);
 
+      $admin = new User();
+      $admin->name = 'Oisin McCann';
+      $admin->email = 'oisin@mybookstore.ie';
+      $admin->password = bcrypt('secret');
+      $admin->save();
+      $admin->roles()->attach($role_admin);
+
       $user = new User();
-      $user->name = 'Darryl Sullivan';
-      $user->email = 'darryls@mybookstore.ie';
+      $user->name = 'Lawrence Sullivan';
+      $user->email = 'user@mybookstore.ie';
+      $user->password = bcrypt('secret');
+      $user->save();
+      $user->roles()->attach($role_user);
+
+      $user = new User();
+      $user->name = 'The Law';
+      $user->email = 'Law@mybookstore.ie';
+      $user->password = bcrypt('secret');
+      $user->save();
+      $user->roles()->attach($role_user);
+
+      $user = new User();
+      $user->name = 'This Man';
+      $user->email = 'Man@mybookstore.ie';
+      $user->password = bcrypt('secret');
+      $user->save();
+      $user->roles()->attach($role_user);
+
+      $user = new User();
+      $user->name = 'Mad Lad';
+      $user->email = 'ML@mybookstore.ie';
+      $user->password = bcrypt('secret');
+      $user->save();
+      $user->roles()->attach($role_user);
+
+      $user = new User();
+      $user->name = 'Shane Manning';
+      $user->email = 'Manning@mybookstore.ie';
       $user->password = bcrypt('secret');
       $user->save();
       $user->roles()->attach($role_user);

@@ -9,6 +9,9 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\User;
+use App\Customer;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -20,6 +23,8 @@ public function __construct()
 }
 
   public function index(){
+
+    $user = Auth::user();
     return view('user.home');
     }
   }
